@@ -1,6 +1,9 @@
 # getx_sample
 
-A new Flutter project.
+-- Getx
+-- Responsive Screen
+
+![Project Tool](cucumber.jpg)
 
 ## Getting Started
 
