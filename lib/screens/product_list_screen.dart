@@ -4,7 +4,8 @@ import 'package:getx_sample/controllers/cart_controller.dart';
 import 'package:getx_sample/controllers/product_list_controller.dart';
 import 'package:getx_sample/models/cart.dart';
 import 'package:getx_sample/screens/cart_screen.dart';
-import 'package:getx_sample/screens/product_detail_creen.dart';
+import 'package:getx_sample/screens/home_screen.dart';
+import 'package:getx_sample/screens/product_detail_screen.dart';
 import 'package:getx_sample/widgets/custom_text.dart';
 import 'package:responsive_grid/responsive_grid.dart';
 
@@ -21,7 +22,12 @@ class ProductListScreen extends StatelessWidget {
           "Alisveris",
           style: TextStyle(color: Colors.black, fontSize: 20.0),
         ),
-        leading: Icon(Icons.home, color: Colors.black, size: 27.0),
+        leading: IconButton(
+          icon: Icon(Icons.home),
+          iconSize: 26.0,
+          color: Colors.black,
+          onPressed: () => Get.to(HomeScreen()), // Icon => 
+        ),
         backgroundColor: Colors.transparent,
         centerTitle: true,
         elevation: 0.0,

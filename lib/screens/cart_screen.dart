@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_sample/controllers/cart_controller.dart';
-import 'package:getx_sample/screens/product_detail_creen.dart';
+import 'package:getx_sample/screens/product_detail_screen.dart';
 
 class CartScreen extends StatelessWidget {
   final cartController = Get.put(CartController());
@@ -22,6 +22,7 @@ class CartScreen extends StatelessWidget {
             color: Colors.black,
             onPressed: () {
               Get.back();
+              Get.reloadAll();
             },
           ),
         ),
