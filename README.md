@@ -1,6 +1,12 @@
 # getx_sample
 
-A new Flutter project.
+-- Getx
+-- Responsive Screen
+
+![sc](Screenshot_1619528771.png)
+
+![sc](Screenshot_1619528798.png)
+
 
 ## Getting Started
 
