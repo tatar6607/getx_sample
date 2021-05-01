@@ -22,7 +22,6 @@ class CartScreen extends StatelessWidget {
             color: Colors.black,
             onPressed: () {
               Get.back();
-              Get.reloadAll();
             },
           ),
         ),
@@ -64,6 +63,7 @@ class CartScreen extends StatelessWidget {
                           color: Colors.red[100]),
                       onDismissed: (direction) {
                         cartController.removeFromCart(list[index]);
+                        
                       },
                       child: ListTile(
                         leading: CircleAvatar(
@@ -74,7 +74,7 @@ class CartScreen extends StatelessWidget {
                         title: Text(
                           list[index].product.name,
                           style: TextStyle(
-                            fontSize: 18.0,
+                            fontSize: 17.0,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
@@ -88,7 +88,7 @@ class CartScreen extends StatelessWidget {
                         trailing: Text(
                           "${list[index].product.price * list[index].quantity} €",
                           style: TextStyle(
-                            fontSize: 18.0,
+                            fontSize: 17.0,
                             fontWeight: FontWeight.w700,
                           ),
                         ),
@@ -122,15 +122,15 @@ class CartScreen extends StatelessWidget {
               Text(
                 "Total",
                 style: TextStyle(
-                  fontSize: 22.0,
-                  fontWeight: FontWeight.w700,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
               Text(
                 "${cartController.getCartTotal().toString()} €",
                 style: TextStyle(
-                  fontSize: 22.0,
-                  fontWeight: FontWeight.w700,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
             ],

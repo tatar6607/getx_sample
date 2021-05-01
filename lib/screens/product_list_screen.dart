@@ -10,9 +10,8 @@ import 'package:getx_sample/widgets/custom_text.dart';
 import 'package:responsive_grid/responsive_grid.dart';
 
 class ProductListScreen extends StatelessWidget {
-  final ProductListController productListController =
-      Get.put(ProductListController());
-  final cartController = Get.put(CartController());
+  CartController cartController = Get.find();
+  ProductListController productListController = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -23,10 +22,10 @@ class ProductListScreen extends StatelessWidget {
           style: TextStyle(color: Colors.black, fontSize: 20.0),
         ),
         leading: IconButton(
-          icon: Icon(Icons.home),
+          icon: Icon(Icons.arrow_back_ios_outlined),
           iconSize: 26.0,
           color: Colors.black,
-          onPressed: () => Get.to(HomeScreen()), // Icon => 
+          onPressed: () => Get.to(HomeScreen()), // Icon =>
         ),
         backgroundColor: Colors.transparent,
         centerTitle: true,
@@ -93,8 +92,8 @@ class ProductListScreen extends StatelessWidget {
                     ),
                     CustomText(
                       text: product.name,
-                      size: 16,
-                      weight: FontWeight.bold,
+                      size: 17,
+                      weight: FontWeight.w600,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -103,8 +102,8 @@ class ProductListScreen extends StatelessWidget {
                           padding: const EdgeInsets.only(left: 20.0),
                           child: CustomText(
                             text: "${product.price} €",
-                            size: 18,
-                            weight: FontWeight.bold,
+                            size: 17,
+                            weight: FontWeight.w600,
                           ),
                         ),
                         SizedBox(
